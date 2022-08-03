@@ -1,0 +1,19 @@
+/**
+* Utility classes
+*/
+
+.show-desktop {
+  display: none;
+
+  @include grid-media($md) {
+    display: block;
+  }
+}
+
+.show-mobile {
+  display: block;
+
+  @include grid-media($md) {
+    display: none;
+  }
+}

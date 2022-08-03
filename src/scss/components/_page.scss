@@ -1,0 +1,35 @@
+// Page styles
+.page {
+  width: 100vw;
+  height: 100vh;
+
+  &:not(:first-child) {
+    @include margin(nul null null -4px);
+  }
+
+  &--half {
+    position: relative;
+    width: 50vw;
+    z-index: -1;
+
+    img {
+      transform: scale(1);
+    }
+  }
+}
+
+// Scroll Override
+.scroll-container {
+  left: 0;
+  overflow: hidden;
+  
+  @include grid-media($md) {
+    display: flex;
+    height: 100vh;
+  }
+}
+
+// Hide the custom scrollbar
+.c-scrollbar {
+  display: none;
+}

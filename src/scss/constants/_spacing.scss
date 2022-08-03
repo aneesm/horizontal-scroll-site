@@ -1,0 +1,12 @@
+/**
+  PADDING CONSTANTS
+  global padding constants
+**/
+
+$container-width: 1440px;
+
+/***** Common Grid Gutter ******/
+$neat-grid: (gutter: 25px);
+
+// Grid without gutter
+$no-gutter: (gutter: 0);

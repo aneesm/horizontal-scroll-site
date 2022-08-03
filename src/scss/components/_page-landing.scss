@@ -1,0 +1,19 @@
+// Landing section
+.landing {
+  // background: url(#{$themeimages}/landing-img.jpg) $black center center fixed no-repeat;
+  position: relative;
+
+  img {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__title {
+    bottom: 80px;
+    left: 80px;
+    max-width: 490px;
+    position: absolute;
+  }
+}

@@ -1,0 +1,67 @@
+// Navigation
+.navigation {
+  display: flex;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 11;
+
+  @include grid-media($md) {
+    @include padding(40px 64px null 80px);
+  }
+
+  * {
+    color: $white;
+  }
+
+  ul {
+    @include padding(5px null null);
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      @include grid-media($md) {
+        &:not(:last-child) {
+          @include margin(null 4% null null);
+        }
+      }
+
+      a {
+        @include font(15px, 19px);
+      }
+    }
+  }
+
+  &__logo {
+    width: 70px;
+  }
+
+  &__left {
+    @include grid-media($md) {
+      @include margin(null null null 12%);
+      flex-grow: 1;
+    }
+  }
+
+  &__right {
+    @include grid-media($md) {
+      @include margin(null null null auto);
+      flex-grow: 0;
+      width: 22.8%;
+    }
+
+    .search-icon {
+      @include margin(-5px null null);
+      display: inline-block;
+      height: 32px;
+      width: 32px;
+    }
+    
+    li {
+      &:nth-child(2) {
+        margin-right: 6% !important;
+      }
+    }
+  }
+}

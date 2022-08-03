@@ -1,0 +1,69 @@
+// Stories section
+.stories {
+  background: $dark-green;
+  position: relative;
+  z-index: -2;
+
+  @include grid-media($md) {
+    @include padding(8% null null);
+  }
+
+  * {
+    color: $white;
+  }
+
+  &__title {
+    @include grid-media($md) {
+      @include margin(null null 1.25%);
+    }
+  }
+
+  &__img {
+    @include grid-media($md) {
+      @include margin(2.5% null);
+      height: 50vh;
+    }
+  }
+
+  &__wrapper {
+    @include margin(auto null);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__subnav {
+    display: flex;
+
+    @include grid-media($md) {
+      width: 26%;
+    }
+
+    li {
+      &:not(:last-child) {
+        @include margin(null 4% null null);
+      }
+
+      a {
+        @include font(16px, 19px);
+      }
+    }
+  }
+
+  .large-title {
+    bottom: 30%;
+    position: absolute;
+    left: 0;
+
+    h4 {
+      @include font(100px, 168px);
+
+      @include grid-media($md) {
+        @include font(160px, 168px);
+      }
+    }
+  }
+}

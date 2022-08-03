@@ -1,0 +1,78 @@
+.preloader {
+  align-items: center;
+  background-color: $black;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: fixed;
+  transition: all .7s ease;
+  transform: skew(0, 0);
+  width: 100%;
+  z-index: 20;
+
+  svg {
+    stroke-width: .5px;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    fill-opacity: 0;
+    animation: logo-draw 3s linear forwards, logo-fade 1s linear 1.4s forwards;
+    width: 20vw;
+  }
+
+  .logo-char {
+    fill: $white;
+    stroke: $white;
+  }
+
+  @keyframes logo-draw {
+    from {
+      stroke-dashoffset: 300;
+      transform: scale(0.75);
+    }
+    to {
+      stroke-dashoffset: 0;
+      stroke-width: 0;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes logo-fade {
+    to {
+      fill-opacity: 1;
+    }
+  }
+}
+
+.fadeOut {
+  .preloader {
+    transform: skew(60deg, 30deg);
+    transition-delay: 3s;
+  }
+}
+
+.loaded {
+  .preloader {
+    svg {
+      fill-opacity: 1;
+      animation: logo-undraw 3s linear forwards, logo-fadeOut 1s linear 1.4s forwards;
+    }
+
+    @keyframes logo-undraw {
+      from {
+        stroke-dashoffset: 0;
+        stroke-width: 0;
+        transform: scale(1);
+      }
+      to {
+        stroke-dashoffset: 300;
+        transform: scale(0.75);
+      }
+    }
+
+    @keyframes logo-fadeOut {
+      to {
+        fill-opacity: 0;
+      }
+    }
+  }
+}

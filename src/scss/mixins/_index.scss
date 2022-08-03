@@ -1,0 +1,21 @@
+/**
+  MIXINS
+**/
+
+// ======================================
+// Font Size, Line Height and Letter Spacing
+// ======================================
+
+@mixin font($size: null, $line-height: null, $letter-spacing: null) {
+  @if ($size) {
+    font-size: $size;
+  }
+
+  @if ($line-height) {
+    line-height: $line-height;
+  }
+
+  @if ($letter-spacing) {
+    letter-spacing: $letter-spacing;
+  }
+}
